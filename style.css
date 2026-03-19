@@ -1,0 +1,160 @@
+/* Base Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fdfaf7;
+    color: #4a4a4a;
+    margin: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Great Vibes', cursive;
+    color: #8c7b60;
+    margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2.8em; margin: 0; padding: 20px 0; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 2.2em; border-bottom: 2px solid #e3dcd1; padding-bottom: 10px; margin-top: 1.5em; }
+
+p { font-size: 1.1em; color: #6e6e6e; }
+
+/* Layout & Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #f2e7db;
+    text-align: center;
+    padding: 30px 0;
+    border-bottom: 1px solid #e3dcd1;
+}
+
+header .names {
+    color: #8c7b60;
+    font-size: 2em;
+    font-family: 'Great Vibes', cursive;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    margin: 30px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.couple-photo {
+    max-width: 100%;
+    max-height: 400px; /* Adjust as needed */
+    border-radius: 50%;
+    border: 8px solid #f2e7db;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+/* Events Section */
+.events {
+    margin-bottom: 40px;
+}
+
+.event-card {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    transition: transform 0.2s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card h4 {
+    margin-top: 0;
+    color: #6e6e6e;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* RSVP Section */
+.rsvp {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #f2e7db;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #6e6e6e;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box; /* Important! */
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.radio-group label {
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: #8c7b60;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.submit-btn:hover {
+    background-color: #6d5f4b;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #f2e7db;
+    border-top: 1px solid #e3dcd1;
+    margin-top: 50px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.8em; }
+    .container { padding: 10px; }
+    .hero, .rsvp { padding: 20px; }
+}

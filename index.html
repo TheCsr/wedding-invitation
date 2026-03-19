@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding Celebration</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Celebrate with Us</h1>
+        <p class="names">Chandan & Preety</p>
+    </header>
+
+    <main class="container">
+        <div class="hero">
+            <img src="wedding-couple.png" alt="A cartoon illustration of the bride and groom" class="couple-photo">
+            <h2>Our Love Story is Just Beginning...</h2>
+            <p>We are overjoyed to invite you to our wedding celebration. Here are the details for our special day!</p>
+        </div>
+
+        <section class="events">
+            <h3>The Wedding Events</h3>
+            <div class="event-card">
+                <h4>Ceremony & Reception</h4>
+                <p><strong>When:</strong> Saturday, August 17th, 2024 at 4:00 PM</p>
+                <p><strong>Where:</strong> The Whispering Oaks Vineyard, Napa, CA</p>
+                <p>An evening of love, laughter, and dancing.</p>
+            </div>
+            <div class="event-card">
+                <h4>Pre-Wedding Barat</h4>
+                <p><strong>When:</strong> Saturday, August 17th, 2024 at 1:00 PM</p>
+                <p><strong>Where:</strong> Meet at the Grand Hotel Lobby, Napa, CA</p>
+                <p>Join the groom's procession for a joyful celebration!</p>
+            </div>
+        </section>
+
+        <section class="rsvp" id="rsvp">
+            <h3>Kindly Respond</h3>
+            <p>Please let us know if you will be celebrating with us.</p>
+            
+            <form id="weddingForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label>Will you attend the wedding celebration?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="attendWedding" value="yes" required> Yes, I will!</label>
+                        <label><input type="radio" name="attendWedding" value="no"> Respectfully Decline</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Will you join the Barat procession?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="attendBarat" value="yes"> Yes, with joy!</label>
+                        <label><input type="radio" name="attendBarat" value="no"> No, just the wedding</label>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Send My RSVP</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>C & P Wedding, 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
