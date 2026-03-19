@@ -16,8 +16,6 @@ body {
     line-height: 1.8;
 }
 
-p { font-size: 1.1em; color: #6e6e6e; }
-
 header {
     background-color: rgba(248, 237, 235, 0.9); /* Slight transparency to see pattern */
     text-align: center;
