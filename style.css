@@ -1,139 +1,191 @@
-/* Color Palette: Cream, Rose, and Dusty Mauve */
 :root {
     --cream-bg: #FFFBF0;
     --rose-accent: #E5989B;
     --deep-rose: #B56576;
-    --text-gray: #5D5D5D;
+    --dark-text: #2c2c2c;
+    /* This is a subtle floral/lace SVG pattern */
+    --pattern-url: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e5989b' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4v-4H4v4H0v2h4v4h2v-4h4v-2H6zm30 0v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM16 14v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 30v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
     background-color: var(--cream-bg);
-    color: var(--text-gray);
+    background-image: var(--pattern-url); /* The Pattern */
+    color: var(--dark-text);
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 header {
-    background-color: #F8EDEB; /* Very soft rose-white */
+    background-color: rgba(248, 237, 235, 0.9); /* Slight transparency to see pattern */
     text-align: center;
-    padding: 50px 0;
+    padding: 80px 0;
     border-bottom: 1px solid #F2D5D0;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Great Vibes', cursive;
+.top-label {
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 0.8em;
     color: var(--deep-rose);
-    margin-bottom: 0.5em;
+    margin-bottom: 10px;
 }
 
-h1 { font-size: 3.2em; margin: 0; }
-.names { font-size: 2.2em; color: var(--rose-accent); }
+h1 { 
+    font-family: 'Pinyon Script', cursive;
+    font-size: 5em; 
+    margin: 0;
+    color: var(--deep-rose);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
+}
+
+h2, h3 {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 3.5em;
+    color: var(--deep-rose);
+    margin-top: 10px;
+}
 
 .container {
-    max-width: 800px;
+    max-width: 750px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
-/* Hero Section */
 .hero {
     text-align: center;
-    background-color: #ffffff;
-    padding: 40px;
-    margin: 30px 0;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(229, 152, 155, 0.15); /* Tinted shadow */
+    padding-bottom: 60px;
 }
 
 .couple-photo {
-    width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
-    border: 6px solid var(--rose-accent);
+    border: 4px double var(--rose-accent);
+    padding: 10px;
+    background-color: white; /* Makes the photo pop from the pattern */
     object-fit: cover;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-/* Event Cards */
+.fancy-p {
+    font-style: italic;
+    font-size: 1.3em;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Elegant Event Cards */
 .event-card {
-    background-color: white;
-    padding: 30px;
-    margin-bottom: 25px;
-    border-radius: 15px;
-    border-left: 5px solid var(--rose-accent);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    background: rgba(255, 255, 255, 0.85); /* Frosty glass effect */
+    backdrop-filter: blur(5px);
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 0; /* Square for a more formal 'card' look */
+    text-align: center;
+    border: 1px solid #F2D5D0;
+    position: relative;
+}
+
+/* Decorative Corner for the card */
+.event-card::before {
+    content: "✿";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: var(--rose-accent);
+    font-size: 0.8em;
 }
 
 .event-card h4 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--dark-text);
+}
+
+.location {
+    font-style: italic;
     color: var(--deep-rose);
-    margin-top: 0;
+    margin-top: 5px;
 }
 
-/* RSVP Form */
+/* Formal RSVP Section */
 .rsvp {
-    background-color: white;
-    padding: 40px;
-    border-radius: 20px;
-    border: 2px solid #F8EDEB;
-    margin-top: 50px;
+    background: white;
+    padding: 60px 40px;
+    border: 1px solid #F2D5D0;
+    margin-top: 60px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
 }
 
-.form-group { margin-bottom: 25px; }
+.form-group {
+    margin-bottom: 35px;
+    border-bottom: 1px solid #F8EDEB;
+    padding-bottom: 10px;
+}
 
 label {
     display: block;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     color: var(--deep-rose);
 }
 
-input[type="text"], input[type="email"] {
+input[type="text"], input[type="email"], input[type="number"] {
     width: 100%;
-    padding: 15px;
-    border: 1px solid #F2D5D0;
-    border-radius: 10px;
-    background-color: #FFFDFD;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+    outline: none;
 }
 
 .radio-group label {
     display: inline-block;
-    font-weight: normal;
-    margin-right: 30px;
+    font-weight: 400;
+    margin-right: 40px;
+    text-transform: none;
+    letter-spacing: 0;
     cursor: pointer;
 }
 
 .submit-btn {
-    background-color: var(--rose-accent);
+    background-color: var(--deep-rose);
     color: white;
+    padding: 20px 60px;
     border: none;
-    padding: 15px 40px;
-    border-radius: 50px;
-    font-size: 1.1em;
-    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.5s;
+    margin-top: 20px;
     width: 100%;
 }
 
 .submit-btn:hover {
-    background-color: var(--deep-rose);
-    transform: translateY(-2px);
+    background-color: var(--dark-text);
+    letter-spacing: 6px;
 }
 
 footer {
+    padding: 80px 0;
     text-align: center;
-    padding: 40px 0;
-    color: var(--rose-accent);
-    font-size: 0.9em;
+    font-size: 2em;
+    font-family: 'Pinyon Script', cursive;
+    color: var(--deep-rose);
 }
 
-/* Mobile adjustments */
+/* Mobile Fixes */
 @media (max-width: 600px) {
-    h1 { font-size: 2.5em; }
-    .couple-photo { width: 180px; height: 180px; }
+    h1 { font-size: 3.5em; }
+    .couple-photo { width: 200px; height: 200px; }
+    .rsvp { padding: 30px 20px; }
 }

@@ -1,72 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chandan & Preety's Wedding</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
     <header>
-        <h1>Celebrate with Us</h1>
-        <p class="names">Chandan & Preety</p>
+        <p class="top-label">The Wedding of</p>
+        <h1>Chandan & Preety</h1>
     </header>
 
     <main class="container">
         <div class="hero">
             <img src="wedding-couple.png" alt="Chandan and Preety" class="couple-photo">
-            <h2>Our Love Story</h2>
-            <p>We are overjoyed to invite you to our wedding celebration.</p>
-            <a href="#rsvp" style="color: #B56576; font-weight: bold; text-decoration: none;">Click Here to RSVP ↓</a>
+            <h2>Save the Date</h2>
+            <p class="fancy-p">We request the honor of your presence as we begin our life together.</p>
         </div>
 
         <section class="events">
-            <h3>The Wedding Events</h3>
-
+            <h3>Wedding Itinerary</h3>
+            
             <div class="event-card">
                 <h4>Haldi & Mehendi</h4>
-                <p><strong>When:</strong> April 28 (Baisakh 15 BS)</p>
-                <p><strong>Where:</strong> At Our Own Residence</p>
+                <p>April 28 (Baisakh 15 BS)</p>
+                <p class="location">At Our Own Residence</p>
             </div>
 
             <div class="event-card">
                 <h4>The Wedding Ceremony</h4>
-                <p><strong>When:</strong> April 30 (Baisakh 17 BS)</p>
-                <p><strong>Where:</strong> Hotel Sita Palace, Sarlahi, Nepal</p>
+                <p>April 30 (Baisakh 17 BS)</p>
+                <p class="location">Hotel Sita Palace, Sarlahi, Nepal</p>
             </div>
 
             <div class="event-card">
                 <h4>Grand Reception</h4>
-                <p><strong>When:</strong> May 02 (Baisakh 19 BS)</p>
-                <p><strong>Where:</strong> Vishuwa Hotel, Birgunj, Nepal</p>
+                <p>May 02 (Baisakh 19 BS)</p>
+                <p class="location">Vishuwa Hotel, Birgunj, Nepal</p>
             </div>
         </section>
 
         <section class="rsvp" id="rsvp">
             <h3>Kindly Respond</h3>
-            <p>Please let us know if you will be joining our festivities.</p>
-
+            
             <form id="weddingForm">
                 <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <label>Your Name</label>
+                    <input type="text" name="name" placeholder="Full Name" required>
                 </div>
+
                 <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                    <label>Will you attend the wedding celebration?</label>
+                    <label>Will you attend the Wedding?</label>
                     <div class="radio-group">
                         <label><input type="radio" name="attendWedding" value="yes" required> Yes</label>
                         <label><input type="radio" name="attendWedding" value="no"> No</label>
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <label>Will you attend the Reception?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="attendReception" value="yes" required> Yes</label>
+                        <label><input type="radio" name="attendReception" value="no"> No</label>
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <label>Will you join the Barat?</label>
                     <div class="radio-group">
@@ -74,16 +75,21 @@
                         <label><input type="radio" name="attendBarat" value="no"> No</label>
                     </div>
                 </div>
-                <button type="submit" class="submit-btn">Send My RSVP</button>
+
+                <div class="form-group">
+                    <label>How many people for the Barat?</label>
+                    <input type="number" name="baratCount" min="0" max="10" placeholder="Number of guests">
+                </div>
+
+                <button type="submit" class="submit-btn">Send My Response</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>Chandan & Preety's Wedding 2026</p>
+        <p>~ Chandan & Preety ~</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
