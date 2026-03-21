@@ -1,4 +1,32 @@
 /* Color Palette: Cream, Rose, and Dusty Mauve */
+/* Language Switcher Styling */
+.lang-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    z-index: 1000;
+}
+
+.lang-switch button {
+    background: none;
+    border: none;
+    color: #B56576;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.lang-switch button:hover {
+    text-decoration: underline;
+}
+
+/* Ensure Nepali text looks good */
+[lang="ne"] {
+    line-height: 1.6;
+}
+
 :root {
     --cream-bg: #FFFBF0;
     --rose-accent: #E5989B;
