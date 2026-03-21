@@ -132,3 +132,6 @@ document.getElementById('weddingForm').addEventListener('submit', function(e) {
         window.location.href = 'celebration.html?guest=' + encodedName;
     }, 600); 
 });
+
+// This line makes Nepali the default on page load
+changeLanguage('ne');
