@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chandan & Preety's Wedding</title>
-    <link rel="stylesheet" href="style.css?v=1.1">
-    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=1.3">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
+    <script type="text/javascript">var submitted = false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
     <div class="lang-container">
-    <div class="lang-slider">
-        <div class="slider-btn" id="slider-bg"></div>
-        <button type="button" class="toggle-opt active" id="en-btn" onclick="changeLanguage('en')">EN</button>
-        <button type="button" class="toggle-opt" id="ne-btn" onclick="changeLanguage('ne')">NE</button>
+        <div class="lang-slider">
+            <div class="slider-btn" id="slider-bg"></div>
+            <button type="button" class="toggle-opt active" id="en-btn" onclick="changeLanguage('en')">EN</button>
+            <button type="button" class="toggle-opt" id="ne-btn" onclick="changeLanguage('ne')">NE</button>
+        </div>
     </div>
-</div>
 
     <header>
         <p class="top-label" id="topLabel">The Wedding of</p>
@@ -31,7 +37,7 @@
 
         <section class="events">
             <h3 id="itineraryTitle">Wedding Itinerary</h3>
-            
+
             <div class="event-card">
                 <h4 id="event1Title">Haldi & Mehendi</h4>
                 <p id="event1Date">April 28 (Baisakh 15 BS)</p>
@@ -53,39 +59,49 @@
 
         <section class="rsvp" id="rsvp">
             <h3 id="rsvpTitle">Kindly Respond</h3>
-            <form id="weddingForm">
+            <form id="weddingForm"
+                action="https://docs.google.com/forms/d/e/1FAIpQLScGv2v-2o2ZOhovn8Myv6xRVegFiSXfIRU-Gl2egsqE_-2AxQ/formResponse"
+                method="POST" target="hidden_iframe">
+
                 <div class="form-group">
                     <label id="labelName">Your Name</label>
-                    <input type="text" name="name" id="inputName" placeholder="Full Name" required>
+                    <input type="text" name="entry.1610074436" id="inputName" placeholder="Full Name" required>
                 </div>
 
                 <div class="form-group">
                     <label id="labelWedding">Will you attend the Wedding?</label>
                     <div class="radio-group">
-                        <label><input type="radio" name="attendWedding" value="yes" required> <span id="optYes1">Yes</span></label>
-                        <label><input type="radio" name="attendWedding" value="no"> <span id="optNo1">No</span></label>
+                        <label><input type="radio" name="entry.816962617" value="Yes" required> <span
+                                id="optYes1">Yes</span></label>
+                        <label><input type="radio" name="entry.816962617" value="No"> <span
+                                id="optNo1">No</span></label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label id="labelReception">Will you attend the Reception?</label>
                     <div class="radio-group">
-                        <label><input type="radio" name="attendReception" value="yes" required> <span id="optYes2">Yes</span></label>
-                        <label><input type="radio" name="attendReception" value="no"> <span id="optNo2">No</span></label>
+                        <label><input type="radio" name="entry.949982960" value="Yes" required> <span
+                                id="optYes2">Yes</span></label>
+                        <label><input type="radio" name="entry.949982960" value="No"> <span
+                                id="optNo2">No</span></label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label id="labelBarat">Will you join the Barat?</label>
                     <div class="radio-group">
-                        <label><input type="radio" name="attendBarat" value="yes"> <span id="optYes3">Yes</span></label>
-                        <label><input type="radio" name="attendBarat" value="no"> <span id="optNo3">No</span></label>
+                        <label><input type="radio" name="entry.1559180457" value="Yes"> <span
+                                id="optYes3">Yes</span></label>
+                        <label><input type="radio" name="entry.1559180457" value="No"> <span
+                                id="optNo3">No</span></label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label id="labelBaratCount">How many people for the Barat?</label>
-                    <input type="number" name="baratCount" id="inputCount" min="0" max="10" placeholder="Number of guests">
+                    <input type="number" name="entry.1826075784" id="inputCount" min="0" max="10" placeholder="0"
+                        class="large-input">
                 </div>
 
                 <button type="submit" class="submit-btn" id="submitBtn">Send My Response</button>
@@ -97,6 +113,7 @@
         <p>~ Chandan & Preety ~</p>
     </footer>
 
-    <script src="script.js?v=1.1"></script>
+    <script src="script.js?v=1.3"></script>
 </body>
+
 </html>

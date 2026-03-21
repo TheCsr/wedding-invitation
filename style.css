@@ -187,6 +187,27 @@ footer {
     font-size: 0.9em;
 }
 
+/* Specifically targeting the Barat Count input */
+input[name="baratCount"] {
+    font-size: 1rem;      /* Makes the numbers bigger */
+    padding: 10px;         /* Adds more room inside the box */
+    width: 40%;           /* Ensures it stays full width */
+    max-width: 100px;      /* Restricts it from being TOO wide on desktop */
+    text-align: center;    /* Centers the number */
+    border: 2px solid var(--rose-accent); /* Thicker border */
+    border-radius: 6px;   /* Rounded corners */
+    background-color: #fffafa; /* Very light rose tint */
+    margin-top: 6px;
+    display: block;
+}
+
+/* Optional: Adding a little focus effect when they click it */
+input[name="baratCount"]:focus {
+    border-color: var(--deep-rose);
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(181, 101, 118, 0.2);
+}
+
 /* Mobile adjustments */
 @media (max-width: 600px) {
     h1 { font-size: 2.5em; }

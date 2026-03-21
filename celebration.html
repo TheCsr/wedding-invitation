@@ -1,45 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You! - Our Wedding Celebration</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <title>Thank You - Chandan & Preety</title>
+    <link rel="stylesheet" href="style.css?v=1.5">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <style>
-        /* Unique celebration styles */
-        body { background-color: #fffaf0; text-align: center; }
-        .hero { background: none; box-shadow: none; border: none; padding-top: 60px; }
-        .celebration-message h2 { color: #8c7b60; font-family: 'Great Vibes', cursive; font-size: 3em; margin-top: 0; }
-        .celebration-message p { max-width: 600px; margin: 20px auto; font-size: 1.2em; line-height: 1.6; }
-        .fireworks { font-size: 3em; color: #f2c8d2; }
+        .celebration-container {
+            max-width: 600px;
+            margin: 100px auto;
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid #F2D5D0;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+        }
+
+        .thank-you-name {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 4.5rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        .message-box {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--dark-text);
+            margin: 20px 0 40px;
+            line-height: 1.6;
+        }
+
+        .ornament {
+            color: var(--rose-accent);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .back-home {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            color: var(--deep-rose);
+            text-decoration: none;
+            border-bottom: 1px solid var(--rose-accent);
+            padding-bottom: 5px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            color: var(--dark-text);
+            border-color: var(--dark-text);
+        }
+
+        @media (max-width: 600px) {
+            .thank-you-name {
+                font-size: 3rem;
+            }
+
+            .celebration-container {
+                margin: 50px 20px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Hooray!</h1>
-        <p class="names">Chandan & Preety</p>
-    </header>
+    <div class="celebration-container">
+        <div class="ornament">✿</div>
 
-    <main class="container">
-        <div class="hero">
-            <img src="wedding-couple.png" alt="A cartoon illustration of the bride and groom" class="couple-photo">
-            
-            <div class="celebration-message">
-                <h2>A Warm Welcome Awaits You!</h2>
-                <div class="fireworks">✨ 💖 🎉</div>
-                <p>Thank you so much for responding. We are absolutely thrilled that you are considering celebrating with us!</p>
-                <p>We've received your RSVP details and we can't wait to share our special day with everyone we love.</p>
-                <p>See you at the wedding!</p>
-                <a href="index.html" class="submit-btn">Back to Main Page</a>
-            </div>
+        <h1 id="thankYouHeader" class="thank-you-name">Thank You!</h1>
+
+        <div class="message-box">
+            <p id="personalMsg">Your RSVP has been successfully received. We are truly honored to have you join us as we
+                begin our beautiful journey together.</p>
         </div>
-    </main>
 
-    <footer>
-        <p>C & P Wedding, 2026</p>
-    </footer>
+        <div class="ornament" style="margin-top: 0;">❦</div>
 
+        <p style="margin-top: 30px;">
+            <a href="index.html" class="back-home">Return to Invitation</a>
+        </p>
+    </div>
+
+    <script>
+        // 1. Grab the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const guestName = urlParams.get('guest');
+
+        // Debugging: This will show in your browser console (F12)
+        console.log("Captured Name:", guestName);
+
+        if (guestName && guestName.trim() !== "") {
+            const cleanName = decodeURIComponent(guestName);
+
+            // Update Header
+            document.getElementById('thankYouHeader').innerText = "Thank You, " + cleanName + "!";
+
+            // Update Sub-message
+            document.getElementById('personalMsg').innerHTML =
+                "We have received your response, <strong>" + cleanName + "</strong>. <br>" +
+                "We are so excited to celebrate our special day with you!";
+        }
+    </script>
 </body>
+
 </html>
