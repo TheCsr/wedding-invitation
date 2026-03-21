@@ -55,35 +55,44 @@ const translations = {
 
 function changeLanguage(lang) {
     const t = translations[lang];
-    
+    const slider = document.querySelector('.lang-slider');
+    const enBtn = document.getElementById('en-btn');
+    const neBtn = document.getElementById('ne-btn');
+
+    // Toggle slider styles
+    if (lang === 'ne') {
+        slider.classList.add('nepali-active');
+        neBtn.classList.add('active');
+        enBtn.classList.remove('active');
+    } else {
+        slider.classList.remove('nepali-active');
+        enBtn.classList.add('active');
+        neBtn.classList.remove('active');
+    }
+
+    // Update Text Content
     document.getElementById('topLabel').innerText = t.topLabel;
     document.getElementById('heroTitle').innerText = t.heroTitle;
     document.getElementById('heroDesc').innerText = t.heroDesc;
     document.getElementById('itineraryTitle').innerText = t.itineraryTitle;
-    
     document.getElementById('event1Title').innerText = t.event1Title;
     document.getElementById('event1Date').innerText = t.event1Date;
     document.getElementById('event1Loc').innerText = t.event1Loc;
-    
     document.getElementById('event2Title').innerText = t.event2Title;
     document.getElementById('event2Date').innerText = t.event2Date;
     document.getElementById('event2Loc').innerText = t.event2Loc;
-    
     document.getElementById('event3Title').innerText = t.event3Title;
     document.getElementById('event3Date').innerText = t.event3Date;
     document.getElementById('event3Loc').innerText = t.event3Loc;
-    
     document.getElementById('rsvpTitle').innerText = t.rsvpTitle;
     document.getElementById('labelName').innerText = t.labelName;
     document.getElementById('inputName').placeholder = t.inputName;
-    
     document.getElementById('labelWedding').innerText = t.labelWedding;
     document.getElementById('labelReception').innerText = t.labelReception;
     document.getElementById('labelBarat').innerText = t.labelBarat;
     document.getElementById('labelBaratCount').innerText = t.labelBaratCount;
     document.getElementById('inputCount').placeholder = t.inputCount;
 
-    // Fix Options
     document.getElementById('optYes1').innerText = t.optYes;
     document.getElementById('optYes2').innerText = t.optYes;
     document.getElementById('optYes3').innerText = t.optYes;
@@ -93,11 +102,10 @@ function changeLanguage(lang) {
     
     document.getElementById('submitBtn').innerText = t.submitBtn;
 
-    // Set attribute for styling
     document.body.setAttribute('lang', lang);
 }
 
-// Keep your existing form submission logic here
+// RSVP form submission
 document.getElementById('weddingForm').addEventListener('submit', function(e) {
     e.preventDefault();
     window.location.href = 'celebration.html';

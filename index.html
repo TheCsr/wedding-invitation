@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chandan & Preety's Wedding</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.1">
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="lang-switch">
-        <button onclick="changeLanguage('en')">English</button> | 
-        <button onclick="changeLanguage('ne')">नेपाली</button>
+    <div class="lang-container">
+    <div class="lang-slider">
+        <div class="slider-btn" id="slider-bg"></div>
+        <button type="button" class="toggle-opt active" id="en-btn" onclick="changeLanguage('en')">EN</button>
+        <button type="button" class="toggle-opt" id="ne-btn" onclick="changeLanguage('ne')">NE</button>
     </div>
+</div>
 
     <header>
         <p class="top-label" id="topLabel">The Wedding of</p>
@@ -94,6 +97,6 @@
         <p>~ Chandan & Preety ~</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=1.1"></script>
 </body>
 </html>
